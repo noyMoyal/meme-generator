@@ -1,0 +1,17 @@
+'use strict'
+
+var gMeme = {
+    selectedImgId: 1,
+    selectedLineIdx: 0,
+    lines: [
+        {
+            txt: 'Hello, Meme!',
+            size: 40,
+            color: 'white',
+        }
+    ]
+}
+                   
+function getMeme() {
+    return gMeme
+}
