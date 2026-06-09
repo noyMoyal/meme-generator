@@ -27,3 +27,7 @@ img.onload = () => {
 img.src = 'img/1.jpg'
   }
   
+function onSetLineTxt(txt) {
+    setLineTxt(txt)
+    renderMeme()
+}
