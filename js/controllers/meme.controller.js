@@ -57,13 +57,23 @@ function onDecreaseFontSize() {
   renderMeme()
 }
 
-
 function onAddLine() {
   addLine()
+  updateControls()
   renderMeme()
 }
 
 function onSwitchLine() {
   switchLine()
+  updateControls()
   renderMeme()
+}
+
+// Update the color picker to show the selected line color
+function updateControls() {
+  const meme = getMeme()
+  const selectedLine = meme.lines[meme.selectedLineIdx]
+
+  const elColorPicker = document.querySelector(".color-picker")
+  elColorPicker.value = selectedLine.color
 }
