@@ -12,6 +12,7 @@ function initMemeEditor() {
 
 function renderMeme() {
 const meme = getMeme()
+
 const img = new Image()
 img.onload = () => {
     gElCanvas.height = (img.naturalHeight / img.naturalWidth) * gElCanvas.width
@@ -31,3 +32,12 @@ function onSetLineTxt(txt) {
     setLineTxt(txt)
     renderMeme()
 }
+
+
+
+function ondownloadMeme(elLink) {
+     const imgContent = gElCanvas.toDataURL('image/jpeg')
+    elLink.href = imgContent
+
+}
+
