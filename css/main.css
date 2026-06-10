@@ -1,4 +1,18 @@
+* {
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.gallery-section img {
+    width: 220px;
+    cursor: pointer;
+}
+
 button img {
     width: 20px;
     height: 20px;
 }
+

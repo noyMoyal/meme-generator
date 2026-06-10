@@ -22,9 +22,17 @@ function renderMeme() {
 
       // if this is the first line, position it at the top,
       // otherwise position it at the bottom
-      const y = idx === 0 ? 40 : gElCanvas.height - 40
+      const y = idx === 0 ? 60 : gElCanvas.height - 40
       gCtx.textAlign = "center"
+      
+      // TODO: handle long text overflow
       gCtx.fillText(line.txt, gElCanvas.width / 2, y)
+
+      if (idx === meme.selectedLineIdx) {
+    gCtx.strokeStyle = '#6d6969'
+    gCtx.lineWidth = 2
+    gCtx.strokeRect(80, y - line.size+2, gElCanvas.width - 160, line.size + 4)
+}
     })
   }
 
