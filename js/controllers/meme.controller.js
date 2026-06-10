@@ -35,9 +35,26 @@ function onSetLineTxt(txt) {
 
 
 
-function ondownloadMeme(elLink) {
+function onDownloadMeme(elLink) {
      const imgContent = gElCanvas.toDataURL('image/jpeg')
     elLink.href = imgContent
 
 }
 
+
+function onSetLineColor(color) {
+    setColor(color)
+    renderMeme()
+}
+
+
+
+function onIncreaseFontSize() {
+    increaseFontSize()
+    renderMeme()
+}
+
+function onDecreaseFontSize() {
+    decreaseFontSize()
+    renderMeme()
+}   
