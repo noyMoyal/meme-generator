@@ -2,4 +2,5 @@
 
 function onInit() {
     initMemeEditor()
+     renderGallery()
 }

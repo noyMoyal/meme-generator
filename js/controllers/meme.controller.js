@@ -23,8 +23,8 @@ img.onload = () => {
     gCtx.fillText(meme.lines[0].txt, gElCanvas.width / 2, 40)
   
 }
-
-img.src = 'img/1.jpg'
+const imgPath = `img/${meme.selectedImgId}.jpg`
+img.src = imgPath
   }
   
 function onSetLineTxt(txt) {
