@@ -1,13 +1,21 @@
-'use strict'
+"use strict"
+
+const DEFAULT_X = 250
+const DEFAULT_TOP_Y = 60
+const DEFAULT_BOTTOM_Y = 430
 
 var gMeme = {
   selectedImgId: 1,
   selectedLineIdx: 0,
   lines: [
     {
-      txt: 'Hello, Meme!',
+      txt: "Hello, Meme!",
       size: 40,
-      color: '#ffffff',
+      color: "#ffffff",
+      pos: {
+        x: DEFAULT_X,
+        y: DEFAULT_TOP_Y,
+      },
     },
   ],
 }
@@ -45,9 +53,13 @@ function addLine() {
 
   // Add a new line using push
   gMeme.lines.push({
-    txt: 'New Line',
+    txt: "New Line",
     size: 40,
-    color: '#ffffff',
+    color: "#ffffff",
+    pos: {
+      x: DEFAULT_X,
+      y: DEFAULT_BOTTOM_Y,
+    },
   })
   // after adding a new line, we want to edit it, so we switch to it
   gMeme.selectedLineIdx = 1
@@ -61,6 +73,3 @@ function switchLine() {
 
   gMeme.selectedLineIdx = gMeme.selectedLineIdx === 0 ? 1 : 0
 }
-
-
-

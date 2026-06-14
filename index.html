@@ -1,52 +1,54 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
     <title>Meme Generator</title>
-</head>
+  </head>
 
-<body onload="onInit()">
-
+  <body onload="onInit()">
     <header>
-    <h1>Meme Generator</h1>
-</header>
+      <h1>Meme Generator</h1>
+    </header>
 
     <main>
-        <section class="gallery-section">
-            <h2>Gallery</h2>
-        </section>
+      <section class="gallery-section">
+        <h2>Gallery</h2>
+      </section>
 
-        <section class="editor-section">
-            <h2>Meme Editor</h2>
-            <canvas width="500" height="500" onclick="onCanvasClick(event)"></canvas>
-            
-            <input class="line-input" type="text" placeholder="Enter meme text" oninput="onSetLineTxt(this.value)">
-            <input class="color-picker" type="color" value="#ffffff" oninput="onSetLineColor(this.value)">
-           
+      <section class="editor-section">
+        <h2>Meme Editor</h2>
+        <div class="editor-container">
+          <canvas width="500" height="500" onclick="onCanvasClick(event)"></canvas>
+
+          <div class="editor-controls">
+            <input class="line-input" type="text" placeholder="Enter meme text" oninput="onSetLineTxt(this.value)" />
+            <input class="color-picker" type="color" value="#ffffff" oninput="onSetLineColor(this.value)" />
+
             <button onclick="onIncreaseFontSize()">
-                <img src="Icons/increase font - icon.png">
-            </button> 
-            
-            <button onclick="onDecreaseFontSize()">
-                <img src="Icons/decrease font - icon.png">
+              <img src="Icons/increase font - icon.png" />
             </button>
-                <button onclick="onAddLine()">
-                    <img src="Icons/add.png">
-                </button>
-                <button onclick="onSwitchLine()">
-                    <img src="Icons/up-and-down-opposite-double-arrows-side-by-side.png">
-                </button>
+
+            <button onclick="onDecreaseFontSize()">
+              <img src="Icons/decrease font - icon.png" />
+            </button>
+            <button onclick="onAddLine()">
+              <img src="Icons/add.png" />
+            </button>
+            <button onclick="onSwitchLine()">
+              <img src="Icons/up-and-down-opposite-double-arrows-side-by-side.png" />
+            </button>
 
             <a href="#" onclick="onDownloadMeme(this)" download="my-meme.jpg">Download Meme</a>
-    
-        </section>
+          </div>
+        </div>
+      </section>
     </main>
-    
+
     <script src="js/services/meme.service.js"></script>
     <script src="js/controllers/meme.controller.js"></script>
     <script src="js/controllers/gallery.controller.js"></script>
     <script src="js/main.js"></script>
-</body>
+  </body>
 </html>
