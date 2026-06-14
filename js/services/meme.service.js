@@ -1,13 +1,13 @@
-"use strict"
+'use strict'
 
 var gMeme = {
   selectedImgId: 1,
   selectedLineIdx: 0,
   lines: [
     {
-      txt: "Hello, Meme!",
+      txt: 'Hello, Meme!',
       size: 40,
-      color: "white",
+      color: '#ffffff',
     },
   ],
 }
@@ -19,6 +19,10 @@ function getMeme() {
 //Update the selected line text
 function setLineTxt(txt) {
   gMeme.lines[gMeme.selectedLineIdx].txt = txt
+}
+
+function setSelectedLineIdx(lineIdx) {
+  gMeme.selectedLineIdx = lineIdx
 }
 
 function setImg(imgId) {
@@ -41,9 +45,9 @@ function addLine() {
 
   // Add a new line using push
   gMeme.lines.push({
-    txt: "New Line",
+    txt: 'New Line',
     size: 40,
-    color: "white",
+    color: '#ffffff',
   })
   // after adding a new line, we want to edit it, so we switch to it
   gMeme.selectedLineIdx = 1
@@ -57,3 +61,6 @@ function switchLine() {
 
   gMeme.selectedLineIdx = gMeme.selectedLineIdx === 0 ? 1 : 0
 }
+
+
+
