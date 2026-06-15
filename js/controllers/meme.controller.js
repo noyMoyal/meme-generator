@@ -99,9 +99,14 @@ function updateControls() {
 }
 
 function onCanvasClick(ev) {
-  const { offsetX, offsetY } = ev
-  const meme = getMeme()
+  // Adjust click position when the canvas is scaled by CSS
+  const scaleX = gElCanvas.width / gElCanvas.clientWidth
+  const scaleY = gElCanvas.height / gElCanvas.clientHeight
+  
+  const offsetX = ev.offsetX * scaleX
+  const offsetY = ev.offsetY * scaleY
 
+  const meme = getMeme()
   const clickedLineIdx = meme.lines.findIndex(line =>
     offsetX >= 80 && offsetX <= 80 + (gElCanvas.width - 160) &&
     offsetY >= line.pos.y - line.size + 2 &&

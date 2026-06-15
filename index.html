@@ -8,22 +8,37 @@
   </head>
 
   <body onload="onInit()">
-    <header>
-      <h1>Meme Generator</h1>
+    <header class="main-header">
+      <div class="logo">
+        <h1>Meme Generator</h1>
+      </div>
+
+      <nav class="main-nav">
+        <a href="#editor">Memes</a>
+        <a href="#gallery">Gallery</a>
+        <!-- <a href="#about">About</a> -->
+      </nav>
     </header>
 
     <main>
-      <section class="gallery-section">
+      <section id="gallery" class="gallery-section">
         <h2>Gallery</h2>
       </section>
 
-      <section class="editor-section">
+      <section id="editor" class="editor-section">
         <h2>Meme Editor</h2>
         <div class="editor-container">
           <canvas width="500" height="500" onclick="onCanvasClick(event)"></canvas>
 
           <div class="editor-controls">
-            <input class="line-input" type="text" placeholder="Enter meme text" oninput="onSetLineTxt(this.value)" />
+            <input
+              class="line-input"
+              type="text"
+              maxlength="32"
+              placeholder="Enter meme text"
+              oninput="onSetLineTxt(this.value)"
+            />
+
             <input class="color-picker" type="color" value="#ffffff" oninput="onSetLineColor(this.value)" />
 
             <button onclick="onIncreaseFontSize()">
