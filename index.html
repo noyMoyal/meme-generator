@@ -14,8 +14,8 @@
       </div>
 
       <nav class="main-nav">
-        <a href="#editor">Memes</a>
         <a href="#gallery">Gallery</a>
+        <a href="#editor">Memes</a>
         <!-- <a href="#about">About</a> -->
       </nav>
     </header>
@@ -28,7 +28,7 @@
       <section id="editor" class="editor-section">
         <h2>Meme Editor</h2>
         <div class="editor-container">
-          <canvas width="500" height="500" onclick="onCanvasClick(event)"></canvas>
+          <canvas width="500" height="500"></canvas>
 
           <div class="editor-controls">
             <input
@@ -54,7 +54,8 @@
             <button onclick="onSwitchLine()">
               <img src="Icons/up-and-down-opposite-double-arrows-side-by-side.png" />
             </button>
-
+            <button onclick="onMoveLineUp()">↑</button>
+            <button onclick="onMoveLineDown()">↓</button>
             <a href="#" onclick="onDownloadMeme(this)" download="my-meme.jpg">Download Meme</a>
           </div>
         </div>
